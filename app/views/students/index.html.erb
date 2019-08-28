@@ -1,0 +1,7 @@
+<%= form_tag('/students', method: 'get') %>
+<%= text_field_tag 'query' %>
+<%= submit_tag "Search" %>
+
+<% @students.each do |student| %>
+   <%= render partial: 'student', locals: {student: student} %>
+<% end %>
